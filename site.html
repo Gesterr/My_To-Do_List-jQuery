@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+  	<script src="jquery.js"></script>
+</head>
+<body>
+	<div class="list">
+	<h1>My To-Do List</h1>
+	<input id="input" type="text" placeholder="New item"/>
+	<button id="add">Add</button>
+	<br/>
+	<oi id="mylist" class="llist"></oi>
+	</div>
+
+<script>
+	$(function(){
+	$("#add").on("click",function(){
+		var val = $("#input").val();
+		if(val !== ""){
+			var elem = $("<li></li>").text(val);
+			$(elem).append("<button class='rem'>X</button>");
+			$("#mylist").append(elem);
+			$("#input").val(""); /* Очистка input */
+
+			/* Код снизу удаляет родителя ТЕКУЩЕГО(this) объекта, который в данном случае является родителем кнопки удаления, элемента <li> */
+			$(".rem").on("click",function(){
+			$(this).parent().remove();
+		});
+		};
+	});
+});
+/* Вышеуказанный кол принимает значение поля ввода, присваивая его к переменной val. Выражение if проверяет, чтобы 
+значение не являлось пустым и затем создаёт новый элемент <li>. Добавляется кнопка для его удаления, после чего
+недавно созданный элемент добавляется к списку <ol id="mylist"> */
+</script>
+
+</body>
+</html>

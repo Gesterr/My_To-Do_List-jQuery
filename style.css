@@ -1,0 +1,28 @@
+html,body{
+	margin: 0;
+	padding: 0;
+}
+body{
+	vertical-align: middle;
+}
+
+.list{
+	width: 250px;
+	height: auto;
+	padding: 15px;
+	border: 5px solid #33CCCC;
+	border-radius: 10px;
+}
+
+li{
+	margin-top: 10px;
+	border: 2px solid #5CCCCC;
+	border-radius: 10px;
+	width: 78%;
+	padding: 3px;
+	text-decoration: none;
+	list-style-type: none;
+}
+.rem{
+	margin-left: 5px;
+}
