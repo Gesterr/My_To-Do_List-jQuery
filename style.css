@@ -5,7 +5,7 @@ html,body{
 body{
 	vertical-align: middle;
 }
-
+/* Конфигурация блока в котором, происходят все эти действия */
 .list{
 	width: 250px;
 	height: auto;
@@ -13,7 +13,7 @@ body{
 	border: 5px solid #33CCCC;
 	border-radius: 10px;
 }
-
+/* Конфигурация тех "дел", которые добавляются */
 li{
 	margin-top: 10px;
 	border: 2px solid #5CCCCC;
@@ -23,6 +23,7 @@ li{
 	text-decoration: none;
 	list-style-type: none;
 }
+/* Конфигурация кнопки удаления */
 .rem{
 	margin-left: 5px;
 }

@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>To-Do List</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script
   src="https://code.jquery.com/jquery-3.5.1.js"
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
   crossorigin="anonymous"></script>
-  	<script src="jquery.js"></script>
 </head>
 <body>
 	<div class="list">
@@ -21,12 +20,12 @@
 <script>
 	$(function(){
 	$("#add").on("click",function(){
-		var val = $("#input").val();
+		var val = $("#input").val();/* Достаём значение из элемента input с помощью команды val() */
 		if(val !== ""){
 			var elem = $("<li></li>").text(val);
 			$(elem).append("<button class='rem'>X</button>");
 			$("#mylist").append(elem);
-			$("#input").val(""); /* Очистка input */
+			$("#input").val(""); /* Очистка input*/
 
 			/* Код снизу удаляет родителя ТЕКУЩЕГО(this) объекта, который в данном случае является родителем кнопки удаления, элемента <li> */
 			$(".rem").on("click",function(){
